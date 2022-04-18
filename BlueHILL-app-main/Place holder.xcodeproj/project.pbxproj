@@ -64,7 +64,6 @@
 		5B448642272B07A70069091A /* ItemMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenuView.swift; sourceTree = "<group>"; };
 		5B62F89427FF6C9A00DB7F2C /* Place_holderApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place_holderApp.swift; sourceTree = "<group>"; };
 		5B62F89627FF6CAF00DB7F2C /* ios-beacon-tools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "ios-beacon-tools"; sourceTree = "<group>"; };
-		5B62F89B27FF708D00DB7F2C /* Place-holder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Place-holder-Bridging-Header.h"; sourceTree = "<group>"; };
 		5B62F89C27FF711600DB7F2C /* Bluetooth-iBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bluetooth-iBeacon.swift"; sourceTree = "<group>"; };
 		5B9240302737E40F00C676F9 /* Blutooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blutooth.swift; sourceTree = "<group>"; };
 		5B924036273862EC00C676F9 /* TestBLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBLE.swift; sourceTree = "<group>"; };
@@ -161,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				5B62F89427FF6C9A00DB7F2C /* Place_holderApp.swift */,
-				5B62F89B27FF708D00DB7F2C /* Place-holder-Bridging-Header.h */,
 				5B62F89627FF6CAF00DB7F2C /* ios-beacon-tools */,
 				0CAF7DC427FB473000341998 /* Extensions */,
 				0CAF7DC127FB416100341998 /* Settings */,
@@ -610,7 +608,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/harvijstucs/Desktop/App-BlueHILL/BlueHILL-app-main/Shared/Place-holder-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/harvijstucs/Desktop/App-BlueHILL/BlueHILL-app-main/Shared/ios-beacon-tools/Place-holder-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -644,7 +642,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/harvijstucs/Desktop/App-BlueHILL/BlueHILL-app-main/Shared/Place-holder-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/harvijstucs/Desktop/App-BlueHILL/BlueHILL-app-main/Shared/ios-beacon-tools/Place-holder-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

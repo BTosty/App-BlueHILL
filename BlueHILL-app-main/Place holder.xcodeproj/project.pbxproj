@@ -11,8 +11,6 @@
 		0CAF7DC627FB474000341998 /* Binding+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAF7DC527FB474000341998 /* Binding+Extensions.swift */; };
 		5B448643272B07A70069091A /* ItemMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B448642272B07A70069091A /* ItemMenuView.swift */; };
 		5B448646272B1C410069091A /* Log in.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECCBC12720BE4600A97846 /* Log in.swift */; };
-		5B448647272B1C510069091A /* Place_holderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB73D41271C87500082E8BF /* Place_holderApp.swift */; };
-		5B448648272B1C540069091A /* Place_holderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB73D41271C87500082E8BF /* Place_holderApp.swift */; };
 		5B448649272B1C570069091A /* Log in.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECCBC12720BE4600A97846 /* Log in.swift */; };
 		5B44864A272B1C590069091A /* Log in.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECCBC12720BE4600A97846 /* Log in.swift */; };
 		5B44864B272B1C5C0069091A /* ItemMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B448642272B07A70069091A /* ItemMenuView.swift */; };
@@ -24,6 +22,9 @@
 		5B448651272B1C650069091A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECCBC32721DBD900A97846 /* SettingsView.swift */; };
 		5B448652272B1C650069091A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECCBC32721DBD900A97846 /* SettingsView.swift */; };
 		5B448653272B1C650069091A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECCBC32721DBD900A97846 /* SettingsView.swift */; };
+		5B62F89527FF6C9A00DB7F2C /* Place_holderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62F89427FF6C9A00DB7F2C /* Place_holderApp.swift */; };
+		5B62F89727FF6CAF00DB7F2C /* ios-beacon-tools in Resources */ = {isa = PBXBuildFile; fileRef = 5B62F89627FF6CAF00DB7F2C /* ios-beacon-tools */; };
+		5B62F89D27FF711600DB7F2C /* Bluetooth-iBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62F89C27FF711600DB7F2C /* Bluetooth-iBeacon.swift */; };
 		5B9240312737E40F00C676F9 /* Blutooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9240302737E40F00C676F9 /* Blutooth.swift */; };
 		5B9240322737E40F00C676F9 /* Blutooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9240302737E40F00C676F9 /* Blutooth.swift */; };
 		5B924037273862EC00C676F9 /* TestBLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B924036273862EC00C676F9 /* TestBLE.swift */; };
@@ -32,8 +33,6 @@
 		5BB73D5C271C87540082E8BF /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB73D5B271C87540082E8BF /* Tests_iOSLaunchTests.swift */; };
 		5BB73D66271C87540082E8BF /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB73D65271C87540082E8BF /* Tests_macOS.swift */; };
 		5BB73D68271C87540082E8BF /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB73D67271C87540082E8BF /* Tests_macOSLaunchTests.swift */; };
-		5BB73D69271C87540082E8BF /* Place_holderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB73D41271C87500082E8BF /* Place_holderApp.swift */; };
-		5BB73D6A271C87540082E8BF /* Place_holderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB73D41271C87500082E8BF /* Place_holderApp.swift */; };
 		5BB73D6D271C87540082E8BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB73D43271C87540082E8BF /* Assets.xcassets */; };
 		5BB73D6E271C87540082E8BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB73D43271C87540082E8BF /* Assets.xcassets */; };
 		5BECCBC02720BE0B00A97846 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECCBBF2720BE0B00A97846 /* MainView.swift */; };
@@ -63,9 +62,12 @@
 		0CAF7DC227FB418000341998 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		0CAF7DC527FB474000341998 /* Binding+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extensions.swift"; sourceTree = "<group>"; };
 		5B448642272B07A70069091A /* ItemMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenuView.swift; sourceTree = "<group>"; };
+		5B62F89427FF6C9A00DB7F2C /* Place_holderApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place_holderApp.swift; sourceTree = "<group>"; };
+		5B62F89627FF6CAF00DB7F2C /* ios-beacon-tools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "ios-beacon-tools"; sourceTree = "<group>"; };
+		5B62F89B27FF708D00DB7F2C /* Place-holder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Place-holder-Bridging-Header.h"; sourceTree = "<group>"; };
+		5B62F89C27FF711600DB7F2C /* Bluetooth-iBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bluetooth-iBeacon.swift"; sourceTree = "<group>"; };
 		5B9240302737E40F00C676F9 /* Blutooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blutooth.swift; sourceTree = "<group>"; };
 		5B924036273862EC00C676F9 /* TestBLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBLE.swift; sourceTree = "<group>"; };
-		5BB73D41271C87500082E8BF /* Place_holderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place_holderApp.swift; sourceTree = "<group>"; };
 		5BB73D43271C87540082E8BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BB73D48271C87540082E8BF /* Place holder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Place holder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB73D4E271C87540082E8BF /* Place holder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Place holder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,7 +160,9 @@
 		5BB73D40271C87500082E8BF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				5BB73D41271C87500082E8BF /* Place_holderApp.swift */,
+				5B62F89427FF6C9A00DB7F2C /* Place_holderApp.swift */,
+				5B62F89B27FF708D00DB7F2C /* Place-holder-Bridging-Header.h */,
+				5B62F89627FF6CAF00DB7F2C /* ios-beacon-tools */,
 				0CAF7DC427FB473000341998 /* Extensions */,
 				0CAF7DC127FB416100341998 /* Settings */,
 				0CAF7DCA27FB518E00341998 /* Views */,
@@ -227,6 +231,7 @@
 			children = (
 				5B924036273862EC00C676F9 /* TestBLE.swift */,
 				5B9240302737E40F00C676F9 /* Blutooth.swift */,
+				5B62F89C27FF711600DB7F2C /* Bluetooth-iBeacon.swift */,
 			);
 			path = "Test files";
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B62F89727FF6CAF00DB7F2C /* ios-beacon-tools in Resources */,
 				5BB73D6D271C87540082E8BF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,9 +405,10 @@
 			files = (
 				5B9240312737E40F00C676F9 /* Blutooth.swift in Sources */,
 				5BECCBC22720BE4600A97846 /* Log in.swift in Sources */,
+				5B62F89D27FF711600DB7F2C /* Bluetooth-iBeacon.swift in Sources */,
+				5B62F89527FF6C9A00DB7F2C /* Place_holderApp.swift in Sources */,
 				5BECCBC02720BE0B00A97846 /* MainView.swift in Sources */,
 				0CAF7DC627FB474000341998 /* Binding+Extensions.swift in Sources */,
-				5BB73D69271C87540082E8BF /* Place_holderApp.swift in Sources */,
 				5BECCBC42721DBDA00A97846 /* SettingsView.swift in Sources */,
 				0CAF7DC327FB418000341998 /* ColorTheme.swift in Sources */,
 				5B924037273862EC00C676F9 /* TestBLE.swift in Sources */,
@@ -419,7 +426,6 @@
 				5B448653272B1C650069091A /* SettingsView.swift in Sources */,
 				5B448650272B1C630069091A /* MainView.swift in Sources */,
 				5B924038273862EC00C676F9 /* TestBLE.swift in Sources */,
-				5BB73D6A271C87540082E8BF /* Place_holderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +438,6 @@
 				5B448646272B1C410069091A /* Log in.swift in Sources */,
 				5BB73D5C271C87540082E8BF /* Tests_iOSLaunchTests.swift in Sources */,
 				5BB73D5A271C87540082E8BF /* Tests_iOS.swift in Sources */,
-				5B448647272B1C510069091A /* Place_holderApp.swift in Sources */,
 				5B44864C272B1C5D0069091A /* ItemMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +451,6 @@
 				5B448649272B1C570069091A /* Log in.swift in Sources */,
 				5BB73D68271C87540082E8BF /* Tests_macOSLaunchTests.swift in Sources */,
 				5BB73D66271C87540082E8BF /* Tests_macOS.swift in Sources */,
-				5B448648272B1C540069091A /* Place_holderApp.swift in Sources */,
 				5B44864B272B1C5C0069091A /* ItemMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,6 +609,8 @@
 				PRODUCT_NAME = "Place holder";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/harvijstucs/Desktop/App-BlueHILL/BlueHILL-app-main/Shared/Place-holder-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -637,6 +643,8 @@
 				PRODUCT_NAME = "Place holder";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/harvijstucs/Desktop/App-BlueHILL/BlueHILL-app-main/Shared/Place-holder-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

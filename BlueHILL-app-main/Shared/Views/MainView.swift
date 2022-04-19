@@ -11,7 +11,9 @@ import SwiftUI
 struct MainView: View {
     
     @EnvironmentObject var colorTheme: ColorTheme
-
+    
+    let ble = Sample()
+    
     init() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
@@ -31,7 +33,7 @@ struct MainView: View {
             VStack(spacing: 20.0) {
                 ScrollView {
                     LazyVGrid(columns: layout, spacing: 5) {
-                        ForEach(BLEManager.shared.peripherals) { item in
+                        ForEach(ble.scanner) { item in
                             NavigationLink(destination:
                                 ItemMenuView(
                                     itemName: item.name,
@@ -71,6 +73,10 @@ struct MainView: View {
                 NavigationLink("•••", destination: SettingsView())
                     .font(.title)
                     .foregroundColor(Color.gray)
+            }
+        }.onAppear(){
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ timer in
+                ble.sample()
             }
         }
     }

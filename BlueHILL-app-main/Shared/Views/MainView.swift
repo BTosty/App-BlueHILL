@@ -12,7 +12,7 @@ struct MainView: View {
     
     @EnvironmentObject var colorTheme: ColorTheme
     
-    let ble = Sample()
+//    let ble = Sample()
     
     init() {
         let appearance = UINavigationBarAppearance()
@@ -33,7 +33,7 @@ struct MainView: View {
             VStack(spacing: 20.0) {
                 ScrollView {
                     LazyVGrid(columns: layout, spacing: 5) {
-                        ForEach(ble.scanner) { item in
+                        ForEach(BLEManager.shared.peripherals) { item in
                             NavigationLink(destination:
                                 ItemMenuView(
                                     itemName: item.name,
@@ -75,8 +75,10 @@ struct MainView: View {
                     .foregroundColor(Color.gray)
             }
         }.onAppear(){
+            BLEManager.shared.startScanning()
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ timer in
-                ble.sample()
+//                ble.sample()
+                BLEManager.shared.startScanning()
             }
         }
     }

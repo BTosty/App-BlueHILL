@@ -7,8 +7,9 @@
 
 #ifndef Place_holder_Bridging_Header_h
 #define Place_holder_Bridging_Header_h
-#include "RNLBeaconScanner.h"
-#include "RNLURLBeaconCompressor.h"
-#include "RNLBeacon+Distance.h"
+//#include "RNLBeacon.h"
+//#include "RNLBeaconScanner.h"
+//#include "RNLURLBeaconCompressor.h"
+//#include "RNLBeacon+Distance.h"
 
 #endif /* Place_holder_Bridging_Header_h */

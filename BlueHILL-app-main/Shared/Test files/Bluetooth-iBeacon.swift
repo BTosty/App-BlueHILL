@@ -7,14 +7,24 @@
 
 import Foundation
 
-class Sample {
+struct BLEPeripheral: Identifiable {
+    let id: Int
+    let name: String
+    let rssi: Int
+    let uuid: String
+    let maj: String
+    let min: String
+}
+
+/*class Sample: ObservableObject {
     var scanner: RNLBeaconScanner?
+    @Published var detBeacon = [BLEPeripheral]()
     func sample() {
         scanner = RNLBeaconScanner.shared()
         scanner?.startScanning()
         
         // Execute this code periodically (every second or so) to view the beacons detected
-
+        
         if let detectedBeacons = scanner?.trackedBeacons() as? [RNLBeacon] {
             for beacon in detectedBeacons {
                 if (beacon.beaconTypeCode.intValue == 0xbeac) {
@@ -31,8 +41,10 @@ class Sample {
                 }
                 else {
                     // some other beacon type
+                    let newPerippheral = BLEPeripheral(id: detBeacon.count, name: beacon.name, rssi: beacon.rssi.intValue, uuid: beacon.id1, maj: beacon.id2, min: beacon.id3)
+                    detBeacon.append(newPerippheral)
                 }
             }
         }
     }
-}
+}*/

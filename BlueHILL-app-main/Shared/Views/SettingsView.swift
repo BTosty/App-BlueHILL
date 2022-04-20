@@ -5,6 +5,8 @@
 //  Created by Harvijs Tucs on 21/10/2021.
 //
 
+#if canImport(SwiftUI)
+import RadioGroup
 import SwiftUI
 
 struct SettingsView: View {
@@ -17,6 +19,7 @@ struct SettingsView: View {
     // them in onAppear function call
     @State private var blueAndPurpleSelected: Bool = false
     @State private var blueAndYellowSelected: Bool = false
+    @State private var selectedIndex: Int = -1
     
     var body: some View {
 
@@ -35,6 +38,11 @@ struct SettingsView: View {
                 Spacer()
                 
                 DisclosureGroup("Background theme") {
+/*                    RadioGroupPicker(selectedIndex: $selectedIndex, titles: ["First", "Second", "Third", "Done"])
+                        .selectedColor(.systemRed)
+                        .titleAlignment(.right)
+                        .environment(\.layoutDirection, .rightToLeft)
+                        .fixedSize()*/
                     Toggle(isOn: $blueAndPurpleSelected.onUpdate {
                         if (colorTheme.selectedSceme == .blueAndPurple){
                             blueAndPurpleSelected = true
@@ -105,3 +113,4 @@ struct MainSettings_Previews: PreviewProvider {
         SettingsView()
     }
 }
+#endif

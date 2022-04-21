@@ -16,7 +16,7 @@ struct BLEPeripheral: Identifiable {
     let min: String
 }
 
-/*class Sample: ObservableObject {
+class Sample: ObservableObject {
     var scanner: RNLBeaconScanner?
     @Published var detBeacon = [BLEPeripheral]()
     func sample() {
@@ -47,4 +47,4 @@ struct BLEPeripheral: Identifiable {
             }
         }
     }
-}*/
+}

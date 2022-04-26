@@ -9,7 +9,7 @@ import SwiftUI
 struct ItemMenuView: View {
     @EnvironmentObject var colorTheme: ColorTheme
     var itemName: String
-    var itemid: Int
+    var itemid: String
     var itemrssi: Int
     var body: some View {
         VStack(spacing: 50){
@@ -41,6 +41,6 @@ struct ItemMenuView: View {
 
 struct ItemMenu_Previews: PreviewProvider {
     static var previews: some View {
-        ItemMenuView(itemName: "0", itemid: 0, itemrssi: 0)
+        ItemMenuView(itemName: "0", itemid: "0", itemrssi: 0)
     }
 }

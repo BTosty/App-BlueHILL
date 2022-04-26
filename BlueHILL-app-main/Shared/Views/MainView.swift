@@ -12,7 +12,7 @@ struct MainView: View {
     
     @EnvironmentObject var colorTheme: ColorTheme
     
-//    let ble = Sample()
+    let ble = Sample()
     
     init() {
         let appearance = UINavigationBarAppearance()
@@ -33,16 +33,16 @@ struct MainView: View {
             VStack(spacing: 20.0) {
                 ScrollView {
                     LazyVGrid(columns: layout, spacing: 5) {
-                        ForEach(BLEManager.shared.peripherals) { item in
+                        ForEach(ble.detBeacon) { item in
                             NavigationLink(destination:
                                 ItemMenuView(
                                     itemName: item.name,
-                                    itemid: item.id,
+                                    itemid: item.uuid,
                                     itemrssi: item.rssi
                                 )
                             ) {
                                 VStack{
-                                    Text(String(item.id))
+                                    Text(String(item.uuid))
                                         .font(.system(size: 50))
                                         .frame(width: 100.0, height: 100.0)
                                         .overlay(Circle().stroke(Color.black, lineWidth: 5))
@@ -75,10 +75,9 @@ struct MainView: View {
                     .foregroundColor(Color.gray)
             }
         }.onAppear(){
-            BLEManager.shared.startScanning()
+            ble.sample()
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ timer in
-//                ble.sample()
-                BLEManager.shared.startScanning()
+                ble.sample()
             }
         }
     }

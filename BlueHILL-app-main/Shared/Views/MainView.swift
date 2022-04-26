@@ -11,8 +11,7 @@ import SwiftUI
 struct MainView: View {
     
     @EnvironmentObject var colorTheme: ColorTheme
-    
-    let ble = Sample()
+    @EnvironmentObject var ble: Sample
     
     init() {
         let appearance = UINavigationBarAppearance()
@@ -75,10 +74,12 @@ struct MainView: View {
                     .foregroundColor(Color.gray)
             }
         }.onAppear(){
+            print("Apeared")
             ble.sample()
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ timer in
-                ble.sample()
-            }
+            print(ble.detBeacon.last ?? "Error")
+            //Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ timer in
+            //    ble.sample()
+            //}
         }
     }
 }

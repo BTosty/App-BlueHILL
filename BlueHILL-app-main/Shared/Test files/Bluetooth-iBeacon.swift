@@ -17,17 +17,27 @@ struct BLEPeripheral: Identifiable {
 }
 
 class Sample: ObservableObject {
-    var scanner: RNLBeaconScanner?
+    
     @Published var detBeacon = [BLEPeripheral]()
+    
+    var scanner: RNLBeaconScanner?
     func sample() {
+        
+        print("Got")
+        let testp = BLEPeripheral(id: 0, name: "test", rssi: 0, uuid: "test", maj: "test", min: "test")
+        detBeacon.append(testp)
+        print(testp.name)
         scanner = RNLBeaconScanner.shared()
         scanner?.startScanning()
         
         // Execute this code periodically (every second or so) to view the beacons detected
         
+        // Problem happens here
         if let detectedBeacons = scanner?.trackedBeacons() as? [RNLBeacon] {
             for beacon in detectedBeacons {
-                if (beacon.beaconTypeCode.intValue == 0xbeac) {
+                let newPerippheral = BLEPeripheral(id: detBeacon.count, name: beacon.name, rssi: beacon.rssi.intValue, uuid: beacon.id1, maj: beacon.id2, min: beacon.id3)
+                detBeacon.append(newPerippheral)
+                /*if (beacon.beaconTypeCode.intValue == 0xbeac) {
                     // this is an AltBeacon
                     NSLog("Detected AltBeacon id1: %@ id2: %@ id3: %@", beacon.id1, beacon.id2, beacon.id3)
                 }
@@ -41,9 +51,8 @@ class Sample: ObservableObject {
                 }
                 else {
                     // some other beacon type
-                    let newPerippheral = BLEPeripheral(id: detBeacon.count, name: beacon.name, rssi: beacon.rssi.intValue, uuid: beacon.id1, maj: beacon.id2, min: beacon.id3)
-                    detBeacon.append(newPerippheral)
-                }
+                    
+                }*/
             }
         }
     }

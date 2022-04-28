@@ -11,16 +11,19 @@ import UIKit
 struct Peripheral: Identifiable {
     let id: Int
     let name: String
-    let rssi: Int
+    var rssi: Int
+    var distance: Double
 }
 
 class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     
-    static let shared = BLEManager()
+    let setStrenght = 2
+    let setPower = -50
     
     var myCentral: CBCentralManager!
     @Published var isSwitchedOn = false
     @Published var peripherals = [Peripheral]()
+    
     override init() {
         super.init()
          
@@ -48,10 +51,26 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
         else {
             peripheralName = "Unknown"
         }
-            
-        let newPeripheral = Peripheral(id: peripherals.count, name: peripheralName, rssi: RSSI.intValue)
-        print(newPeripheral)
-        peripherals.append(newPeripheral)
+        
+        let distance = Double(1000*pow(10.0, Double(1000*(setPower-RSSI.intValue)/(10*setStrenght)).rounded()/1000)).rounded()/1000
+        
+        
+        let newPeripheral = Peripheral(id: peripherals.count, name: peripheralName, rssi: RSSI.intValue, distance: distance)
+        
+        if newPeripheral.name == "BChip2"{
+            print(newPeripheral)
+            if peripherals.count > 0{
+                for (deviceid, _) in peripherals.enumerated(){
+                    peripherals[deviceid].rssi = newPeripheral.rssi
+                    peripherals[deviceid].distance = newPeripheral.distance
+                }
+            }
+            else{
+                peripherals.append(newPeripheral)
+            }
+
+        }
+
     }
          
     func startScanning() {

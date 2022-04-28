@@ -27,12 +27,14 @@ class Sample: ObservableObject {
         let testp = BLEPeripheral(id: 0, name: "test", rssi: 0, uuid: "test", maj: "test", min: "test")
         detBeacon.append(testp)
         print(testp.name)
+        
+        // Scanner might not be working
         scanner = RNLBeaconScanner.shared()
         scanner?.startScanning()
         
         // Execute this code periodically (every second or so) to view the beacons detected
         
-        // Problem happens here
+        // The if either isn't executed or is but the scanner hasn't detected anything
         if let detectedBeacons = scanner?.trackedBeacons() as? [RNLBeacon] {
             for beacon in detectedBeacons {
                 let newPerippheral = BLEPeripheral(id: detBeacon.count, name: beacon.name, rssi: beacon.rssi.intValue, uuid: beacon.id1, maj: beacon.id2, min: beacon.id3)

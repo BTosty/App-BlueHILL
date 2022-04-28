@@ -14,6 +14,7 @@ struct Place_holderApp: App {
             MainView()
                 .environmentObject(ColorTheme())
                 .environmentObject(Sample())
+                .environmentObject(BLEManager())
         }
     }
 }

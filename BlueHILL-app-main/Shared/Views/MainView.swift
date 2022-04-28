@@ -12,6 +12,7 @@ struct MainView: View {
     
     @EnvironmentObject var colorTheme: ColorTheme
     @EnvironmentObject var ble: Sample
+    @EnvironmentObject var blue: BLEManager
     
     init() {
         let appearance = UINavigationBarAppearance()
@@ -32,16 +33,17 @@ struct MainView: View {
             VStack(spacing: 20.0) {
                 ScrollView {
                     LazyVGrid(columns: layout, spacing: 5) {
-                        ForEach(ble.detBeacon) { item in
+                        ForEach(blue.peripherals) { item in
                             NavigationLink(destination:
                                 ItemMenuView(
                                     itemName: item.name,
-                                    itemid: item.uuid,
-                                    itemrssi: item.rssi
+                                    itemid: item.id,
+                                    itemrssi: item.rssi,
+                                    distance: item.distance
                                 )
                             ) {
                                 VStack{
-                                    Text(String(item.uuid))
+                                    Text(String(item.id))
                                         .font(.system(size: 50))
                                         .frame(width: 100.0, height: 100.0)
                                         .overlay(Circle().stroke(Color.black, lineWidth: 5))
@@ -75,11 +77,13 @@ struct MainView: View {
             }
         }.onAppear(){
             print("Apeared")
-            ble.sample()
-            print(ble.detBeacon.last ?? "Error")
-            //Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ timer in
-            //    ble.sample()
-            //}
+            blue.startScanning()
+//            ble.sample()
+//            print(ble.detBeacon.last ?? "Error")
+           Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ timer in
+//               ble.sample()
+               blue.startScanning()
+            }
         }
     }
 }

@@ -9,8 +9,9 @@ import SwiftUI
 struct ItemMenuView: View {
     @EnvironmentObject var colorTheme: ColorTheme
     var itemName: String
-    var itemid: String
+    var itemid: Int
     var itemrssi: Int
+    var distance: Double
     var body: some View {
         VStack(spacing: 50){
             Spacer()
@@ -26,7 +27,7 @@ struct ItemMenuView: View {
                     .cornerRadius(100)
                     .shadow(radius: 10)
             }
-            Text("Distance: " + String(itemrssi) + "m").font(.title)
+            Text("Distance: " + String(distance) + "m").font(.title)
             Spacer()
         }.navigationBarTitle(Text(String(itemName)).font(.headline), displayMode: .inline)
         .frame(maxWidth: .infinity)
@@ -41,6 +42,6 @@ struct ItemMenuView: View {
 
 struct ItemMenu_Previews: PreviewProvider {
     static var previews: some View {
-        ItemMenuView(itemName: "0", itemid: "0", itemrssi: 0)
+        ItemMenuView(itemName: "0", itemid: 0, itemrssi: 0, distance: 0)
     }
 }

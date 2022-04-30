@@ -16,6 +16,7 @@ class ColorTheme: ObservableObject {
 
     @Published var selectedSceme: ColorScheme = .blueAndPurple
     @Published var color = Color.blue
+    @Published var selectedIndex: Int = 0
 
     var gradient: Gradient {
         get {

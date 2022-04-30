@@ -12,13 +12,13 @@ struct Peripheral: Identifiable {
     let id: Int
     let name: String
     var rssi: Int
-    var distance: Double
+    var distance: String
 }
 
 class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     
     let setStrenght = 2
-    let setPower = -50
+    let setPower = -65
     
     var myCentral: CBCentralManager!
     @Published var isSwitchedOn = false
@@ -54,8 +54,19 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
         
         let distance = Double(1000*pow(10.0, Double(1000*(setPower-RSSI.intValue)/(10*setStrenght)).rounded()/1000)).rounded()/1000
         
+        var distav = ""
         
-        let newPeripheral = Peripheral(id: peripherals.count, name: peripheralName, rssi: RSSI.intValue, distance: distance)
+        if distance<5.0{
+            distav = "0-5"
+        }
+        else if distance<10.0{
+            distav = "5-10"
+        }
+        else{
+            distav = "10+"
+        }
+        
+        let newPeripheral = Peripheral(id: peripherals.count, name: peripheralName, rssi: RSSI.intValue, distance: distav)
         
         if newPeripheral.name == "BChip2"{
             print(newPeripheral)

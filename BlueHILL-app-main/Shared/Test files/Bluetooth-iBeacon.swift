@@ -10,7 +10,7 @@ import Foundation
 struct BLEPeripheral: Identifiable {
     let id: Int
     let name: String
-    let rssi: Int
+    var rssi: Int
     let uuid: String
     let maj: String
     let min: String
@@ -28,17 +28,26 @@ class Sample: ObservableObject {
         detBeacon.append(testp)
         print(testp.name)
         
-        // Scanner might not be working
         scanner = RNLBeaconScanner.shared()
         scanner?.startScanning()
         
         // Execute this code periodically (every second or so) to view the beacons detected
         
-        // The if either isn't executed or is but the scanner hasn't detected anything
         if let detectedBeacons = scanner?.trackedBeacons() as? [RNLBeacon] {
             for beacon in detectedBeacons {
                 let newPerippheral = BLEPeripheral(id: detBeacon.count, name: beacon.name, rssi: beacon.rssi.intValue, uuid: beacon.id1, maj: beacon.id2, min: beacon.id3)
-                detBeacon.append(newPerippheral)
+                
+                if newPerippheral.name == "BChip2"{
+                    print(newPerippheral)
+                    if detBeacon.count > 0{
+                        for (deviceid, _) in detBeacon.enumerated(){
+                            detBeacon[deviceid].rssi = newPerippheral.rssi
+                        }
+                    }
+                    else{
+                        detBeacon.append(newPerippheral)
+                    }
+                }
                 /*if (beacon.beaconTypeCode.intValue == 0xbeac) {
                     // this is an AltBeacon
                     NSLog("Detected AltBeacon id1: %@ id2: %@ id3: %@", beacon.id1, beacon.id2, beacon.id3)

@@ -19,76 +19,48 @@ struct SettingsView: View {
     // them in onAppear function call
     @State private var blueAndPurpleSelected: Bool = false
     @State private var blueAndYellowSelected: Bool = false
-    @State private var selectedIndex: Int = -1
+    
+    init (){
+        UITableView.appearance().backgroundColor = .clear
+    }
     
     var body: some View {
-
+        
         VStack {
-            ScrollView {
-                ColorPicker(selection: $colorTheme.color) {
-                    Text("Color scheme").font(.title2).foregroundColor(Color.white)
-                }
-                .frame(
-                    maxWidth: .infinity,
-                    minHeight: 50
-                )
-                .background(Color.black)
-                .opacity(0.8)
-                
-                Spacer()
-                
-                DisclosureGroup("Background theme") {
-/*                    RadioGroupPicker(selectedIndex: $selectedIndex, titles: ["First", "Second", "Third", "Done"])
-                        .selectedColor(.systemRed)
-                        .titleAlignment(.right)
-                        .environment(\.layoutDirection, .rightToLeft)
-                        .fixedSize()*/
-                    Toggle(isOn: $blueAndPurpleSelected.onUpdate {
-                        if (colorTheme.selectedSceme == .blueAndPurple){
-                            blueAndPurpleSelected = true
-                        }
-                        else{
-                            colorTheme.selectedSceme = .blueAndPurple
-                            blueAndYellowSelected.toggle()
-                        }
-                    }) {
-                        Text("Blue and Purple")
-                            .font(.title2)
+            List{
+                Section(header: Text("Box settings")){
+                    ColorPicker(selection: $colorTheme.color, supportsOpacity: false) {
+                        Text("Box color")
                     }
-                    .frame(
-                        maxWidth: .infinity,
-                        minHeight: 50
-                    )
-                    
-                    Toggle(isOn: $blueAndYellowSelected.onUpdate {
-                        if (colorTheme.selectedSceme == .blueAndYellow){
-                            blueAndYellowSelected = true
-                        }
-                        else{
-                            colorTheme.selectedSceme = .blueAndYellow
-                            blueAndPurpleSelected.toggle()
-                        }
-                    }) {
-                        Text("Blue and Yellow")
-                            .font(.title2)
-                    }
-                    .frame(
-                        maxWidth: .infinity,
-                        minHeight: 50
-                    )
+                    .foregroundColor(Color.white)
+                    .listRowBackground(Color.black)
                 }
-                .frame(
-                    maxWidth: .infinity,
-                    minHeight: 50
-                )
-                .font(.title2)
-                .background(Color.black)
-                .opacity(0.8)
-                .foregroundColor(Color.white)
-                .font(.title2)
-                
-                Spacer()
+                Section(header: Text("Background settings")){
+                    DisclosureGroup("Background color theme") {
+                        RadioGroupPicker(selectedIndex: $colorTheme.selectedIndex, titles: ["Blue and Purple", "Blue and Yellow"])
+                            .selectedColor(.green)
+                            .itemSpacing(100)
+                            .titleColor(.white)
+                            .titleAlignment(.left)
+                            .environment(\.layoutDirection, .rightToLeft)
+                            .fixedSize()
+                            .onChange(of: colorTheme.selectedIndex){newValue in
+                                print(newValue)
+                                switch newValue{
+                                case 0:
+                                    colorTheme.selectedSceme = .blueAndPurple
+                                case 1:
+                                    colorTheme.selectedSceme = .blueAndYellow
+                                default:
+                                    colorTheme.selectedSceme = .blueAndPurple
+                                }
+                            }
+                    }
+                    .foregroundColor(Color.white)
+                    .listRowBackground(Color.black)
+                }
             }
+            .foregroundColor(Color.white)
             Spacer()
         }
         .onAppear(perform: {

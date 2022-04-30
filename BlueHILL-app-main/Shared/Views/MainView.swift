@@ -17,10 +17,11 @@ struct MainView: View {
     init() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .black
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.backgroundColor = UIColor(white: 0, alpha: 0.9)
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = UINavigationBarAppearance()
     }
     
     let layout = [
@@ -78,10 +79,10 @@ struct MainView: View {
         }.onAppear(){
             print("Apeared")
             blue.startScanning()
-//            ble.sample()
+            ble.sample()
 //            print(ble.detBeacon.last ?? "Error")
            Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ timer in
-//               ble.sample()
+               ble.sample()
                blue.startScanning()
             }
         }

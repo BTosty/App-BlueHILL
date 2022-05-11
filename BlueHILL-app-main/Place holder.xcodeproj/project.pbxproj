@@ -37,6 +37,8 @@
 		5B9240322737E40F00C676F9 /* Blutooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9240302737E40F00C676F9 /* Blutooth.swift */; };
 		5B924037273862EC00C676F9 /* TestBLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B924036273862EC00C676F9 /* TestBLE.swift */; };
 		5B924038273862EC00C676F9 /* TestBLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B924036273862EC00C676F9 /* TestBLE.swift */; };
+		5B9BE82C28233055001C84D9 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 5B9BE82B28233055001C84D9 /* icons */; };
+		5B9BE82D28233055001C84D9 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 5B9BE82B28233055001C84D9 /* icons */; };
 		5BB73D5A271C87540082E8BF /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB73D59271C87540082E8BF /* Tests_iOS.swift */; };
 		5BB73D5C271C87540082E8BF /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB73D5B271C87540082E8BF /* Tests_iOSLaunchTests.swift */; };
 		5BB73D66271C87540082E8BF /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB73D65271C87540082E8BF /* Tests_macOS.swift */; };
@@ -97,6 +99,7 @@
 		5B62F89C27FF711600DB7F2C /* Bluetooth-iBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bluetooth-iBeacon.swift"; sourceTree = "<group>"; };
 		5B9240302737E40F00C676F9 /* Blutooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blutooth.swift; sourceTree = "<group>"; };
 		5B924036273862EC00C676F9 /* TestBLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBLE.swift; sourceTree = "<group>"; };
+		5B9BE82B28233055001C84D9 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = ../../../../icons; sourceTree = "<group>"; };
 		5BB73D43271C87540082E8BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BB73D48271C87540082E8BF /* Place holder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Place holder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB73D4E271C87540082E8BF /* Place holder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Place holder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,6 +227,7 @@
 			children = (
 				0C93F7EA2811CE4C00659379 /* iBeacon */,
 				5B62F89427FF6C9A00DB7F2C /* Place_holderApp.swift */,
+				5BD7C990282C218C005D42E0 /* PlugIns */,
 				0CAF7DC427FB473000341998 /* Extensions */,
 				0CAF7DC127FB416100341998 /* Settings */,
 				0CAF7DCA27FB518E00341998 /* Views */,
@@ -282,6 +286,7 @@
 		5BBADBC027FF64FE0043A6FD /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				5B9BE82B28233055001C84D9 /* icons */,
 				5BB73D43271C87540082E8BF /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -295,6 +300,13 @@
 				5B62F89C27FF711600DB7F2C /* Bluetooth-iBeacon.swift */,
 			);
 			path = "Test files";
+			sourceTree = "<group>";
+		};
+		5BD7C990282C218C005D42E0 /* PlugIns */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlugIns;
 			sourceTree = "<group>";
 		};
 		5BECCBC92725E12200A97846 /* Frameworks */ = {
@@ -440,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BB73D6D271C87540082E8BF /* Assets.xcassets in Resources */,
+				5B9BE82C28233055001C84D9 /* icons in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BB73D6E271C87540082E8BF /* Assets.xcassets in Resources */,
+				5B9BE82D28233055001C84D9 /* icons in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +685,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Place-holder--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "BChip finder";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -707,6 +722,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Place-holder--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "BChip finder";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

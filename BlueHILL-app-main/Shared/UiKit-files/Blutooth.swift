@@ -17,9 +17,6 @@ struct Peripheral: Identifiable {
 
 class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     
-    let setStrenght = 2
-    let setPower = -65
-    
     var myCentral: CBCentralManager!
     @Published var isSwitchedOn = false
     @Published var peripherals = [Peripheral]()
@@ -35,6 +32,9 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if central.state == .poweredOn {
             isSwitchedOn = true
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ timer in
+                self.startScanning()
+            }
         }
         else {
             isSwitchedOn = false
@@ -52,14 +52,14 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
             peripheralName = "Unknown"
         }
         
-        let distance = Double(1000*pow(10.0, Double(1000*(setPower-RSSI.intValue)/(10*setStrenght)).rounded()/1000)).rounded()/1000
-        
         var distav = ""
         
-        if distance<5.0{
+        let posrssi = abs(RSSI.int32Value)
+        
+        if posrssi < 80{
             distav = "0-5"
         }
-        else if distance<10.0{
+        else if posrssi < 95{
             distav = "5-10"
         }
         else{
@@ -68,8 +68,8 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
         
         let newPeripheral = Peripheral(id: peripherals.count, name: peripheralName, rssi: RSSI.intValue, distance: distav)
         
-        if newPeripheral.name == "BChip2"{
-            print(newPeripheral)
+        if newPeripheral.name == "BChip"{
+            print(newPeripheral.rssi)
             if peripherals.count > 0{
                 for (deviceid, _) in peripherals.enumerated(){
                     peripherals[deviceid].rssi = newPeripheral.rssi
@@ -81,7 +81,6 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
             }
 
         }
-
     }
          
     func startScanning() {

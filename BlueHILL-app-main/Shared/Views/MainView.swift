@@ -11,7 +11,6 @@ import SwiftUI
 struct MainView: View {
     
     @EnvironmentObject var colorTheme: ColorTheme
-    @EnvironmentObject var ble: Sample
     @EnvironmentObject var blue: BLEManager
     
     init() {
@@ -75,15 +74,6 @@ struct MainView: View {
                 NavigationLink("•••", destination: SettingsView())
                     .font(.title)
                     .foregroundColor(Color.gray)
-            }
-        }.onAppear(){
-            print("Apeared")
-            blue.startScanning()
-            ble.sample()
-//            print(ble.detBeacon.last ?? "Error")
-           Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ timer in
-               ble.sample()
-               blue.startScanning()
             }
         }
     }

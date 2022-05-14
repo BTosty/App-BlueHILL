@@ -33,8 +33,8 @@
 		5B448653272B1C650069091A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECCBC32721DBD900A97846 /* SettingsView.swift */; };
 		5B62F89527FF6C9A00DB7F2C /* Place_holderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62F89427FF6C9A00DB7F2C /* Place_holderApp.swift */; };
 		5B62F89D27FF711600DB7F2C /* Bluetooth-iBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62F89C27FF711600DB7F2C /* Bluetooth-iBeacon.swift */; };
+		5B719554282FCB0D008582E7 /* AppDelelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B719553282FCB0D008582E7 /* AppDelelate.swift */; };
 		5B9240312737E40F00C676F9 /* Blutooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9240302737E40F00C676F9 /* Blutooth.swift */; };
-		5B9240322737E40F00C676F9 /* Blutooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9240302737E40F00C676F9 /* Blutooth.swift */; };
 		5B924037273862EC00C676F9 /* TestBLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B924036273862EC00C676F9 /* TestBLE.swift */; };
 		5B924038273862EC00C676F9 /* TestBLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B924036273862EC00C676F9 /* TestBLE.swift */; };
 		5B9BE82C28233055001C84D9 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 5B9BE82B28233055001C84D9 /* icons */; };
@@ -97,6 +97,7 @@
 		5B448642272B07A70069091A /* ItemMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenuView.swift; sourceTree = "<group>"; };
 		5B62F89427FF6C9A00DB7F2C /* Place_holderApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place_holderApp.swift; sourceTree = "<group>"; };
 		5B62F89C27FF711600DB7F2C /* Bluetooth-iBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bluetooth-iBeacon.swift"; sourceTree = "<group>"; };
+		5B719553282FCB0D008582E7 /* AppDelelate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelelate.swift; sourceTree = "<group>"; };
 		5B9240302737E40F00C676F9 /* Blutooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blutooth.swift; sourceTree = "<group>"; };
 		5B924036273862EC00C676F9 /* TestBLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBLE.swift; sourceTree = "<group>"; };
 		5B9BE82B28233055001C84D9 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = ../../../../icons; sourceTree = "<group>"; };
@@ -209,6 +210,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		5B719555282FCB67008582E7 /* UiKit-files */ = {
+			isa = PBXGroup;
+			children = (
+				5B719553282FCB0D008582E7 /* AppDelelate.swift */,
+				5B9240302737E40F00C676F9 /* Blutooth.swift */,
+			);
+			path = "UiKit-files";
+			sourceTree = "<group>";
+		};
 		5BB73D3B271C874F0082E8BF = {
 			isa = PBXGroup;
 			children = (
@@ -225,13 +235,14 @@
 		5BB73D40271C87500082E8BF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				0C93F7EA2811CE4C00659379 /* iBeacon */,
 				5B62F89427FF6C9A00DB7F2C /* Place_holderApp.swift */,
+				0C93F7EA2811CE4C00659379 /* iBeacon */,
 				5BD7C990282C218C005D42E0 /* PlugIns */,
 				0CAF7DC427FB473000341998 /* Extensions */,
 				0CAF7DC127FB416100341998 /* Settings */,
 				0CAF7DCA27FB518E00341998 /* Views */,
 				5BBADBBD27FF64DB0043A6FD /* PossibleViews */,
+				5B719555282FCB67008582E7 /* UiKit-files */,
 				5BBADBC027FF64FE0043A6FD /* Assets */,
 				5BBADBC227FF65210043A6FD /* Test files */,
 			);
@@ -296,7 +307,6 @@
 			isa = PBXGroup;
 			children = (
 				5B924036273862EC00C676F9 /* TestBLE.swift */,
-				5B9240302737E40F00C676F9 /* Blutooth.swift */,
 				5B62F89C27FF711600DB7F2C /* Bluetooth-iBeacon.swift */,
 			);
 			path = "Test files";
@@ -499,6 +509,7 @@
 				5BECCBC02720BE0B00A97846 /* MainView.swift in Sources */,
 				0CAF7DC627FB474000341998 /* Binding+Extensions.swift in Sources */,
 				0C93F7FF2811D13B00659379 /* RNLURLBeaconCompressor.m in Sources */,
+				5B719554282FCB0D008582E7 /* AppDelelate.swift in Sources */,
 				5BECCBC42721DBDA00A97846 /* SettingsView.swift in Sources */,
 				0CAF7DC327FB418000341998 /* ColorTheme.swift in Sources */,
 				5B924037273862EC00C676F9 /* TestBLE.swift in Sources */,
@@ -512,7 +523,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B9240322737E40F00C676F9 /* Blutooth.swift in Sources */,
 				5B44864D272B1C5E0069091A /* ItemMenuView.swift in Sources */,
 				5B44864A272B1C590069091A /* Log in.swift in Sources */,
 				5B448653272B1C650069091A /* SettingsView.swift in Sources */,

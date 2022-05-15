@@ -7,6 +7,7 @@
 
 import UIKit
 import BackgroundTasks
+import UserNotifications
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -19,6 +20,17 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         print("cringe")
         sqeduleRef()
+        let content = UNMutableNotificationContent()
+        content.title = "Warning"
+        content.subtitle = "x has been forgoten"
+        content.sound = UNNotificationSound.default
+        //le trigger
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        //le id
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        //send it
+        UNUserNotificationCenter.current().add(request)
+        
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
@@ -28,7 +40,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     func sqeduleRef(){
         let request = BGAppRefreshTaskRequest(identifier: "Need")
-        request.earliestBeginDate = Date(timeIntervalSinceNow: 2)// check after 2 seconds
+        request.earliestBeginDate = Date(timeIntervalSinceNow: 5)// check after 2 seconds
         
         do{
             try BGTaskScheduler.shared.submit(request)
@@ -47,9 +59,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         }
         else{
             for device in BLEManager().peripherals{
-                if device.distance == "5-10"{
+                if device.distance == "0-5"{
+                    
                     print(device.name)
                     print("TOO FAR")
+                    
                 }
             }
             BLEManager().stopScanning()

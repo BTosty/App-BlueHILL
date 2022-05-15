@@ -52,21 +52,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     func checkdist(task: BGAppRefreshTask){
         sqeduleRef()
         
-        BLEManager().startScanning()
-        if BLEManager().isSwitchedOn == false{
-            print("Turn on bluetooth")
-            BLEManager().stopScanning()
+        let operation = BLEManager().backcheck()
+        
+        task.expirationHandler = {
         }
-        else{
-            for device in BLEManager().peripherals{
-                if device.distance == "0-5"{
-                    
-                    print(device.name)
-                    print("TOO FAR")
-                    
-                }
-            }
-            BLEManager().stopScanning()
+        
+        operation.completionBlock = {
         }
+        
+        OperationQueue.addOperation(operation)
     }
 }

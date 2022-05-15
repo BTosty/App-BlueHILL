@@ -38,6 +38,7 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
         }
         else {
             isSwitchedOn = false
+            stopScanning()
         }
     }
 
@@ -91,5 +92,24 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     func stopScanning() {
         print("stopScanning")
         myCentral.stopScan()
+    }
+    
+    func backcheck(){
+        startScanning()
+        if isSwitchedOn == false{
+            print("Turn on bluetooth")
+            stopScanning()
+        }
+        else{
+            for device in peripherals{
+                if device.distance == "0-5"{
+                    
+                    print(device.name)
+                    print("TOO FAR")
+                    
+                }
+            }
+            stopScanning()
+        }
     }
 }

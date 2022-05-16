@@ -17,6 +17,8 @@ struct Peripheral: Identifiable {
 
 class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     
+    static let shared = BLEManager()
+
     var myCentral: CBCentralManager!
     @Published var isSwitchedOn = false
     @Published var peripherals = [Peripheral]()

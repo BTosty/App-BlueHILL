@@ -15,7 +15,7 @@ struct Place_holderApp: App {
         WindowGroup {
             MainView()
                 .environmentObject(ColorTheme())
-                .environmentObject(BLEManager())
+                .environmentObject(BLEManager.shared)
         }
     }
 }

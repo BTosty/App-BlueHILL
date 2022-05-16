@@ -45,6 +45,8 @@
 		5BB73D68271C87540082E8BF /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB73D67271C87540082E8BF /* Tests_macOSLaunchTests.swift */; };
 		5BB73D6D271C87540082E8BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB73D43271C87540082E8BF /* Assets.xcassets */; };
 		5BB73D6E271C87540082E8BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB73D43271C87540082E8BF /* Assets.xcassets */; };
+		5BD3166F2832ADE400E02031 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD3166E2832ADE400E02031 /* Operations.swift */; };
+		5BD316712832B5F400E02031 /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD316702832B5F400E02031 /* PersistentContainer.swift */; };
 		5BECCBC02720BE0B00A97846 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECCBBF2720BE0B00A97846 /* MainView.swift */; };
 		5BECCBC22720BE4600A97846 /* Log in.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECCBC12720BE4600A97846 /* Log in.swift */; };
 		5BECCBC42721DBDA00A97846 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECCBC32721DBD900A97846 /* SettingsView.swift */; };
@@ -111,6 +113,8 @@
 		5BB73D61271C87540082E8BF /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB73D65271C87540082E8BF /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		5BB73D67271C87540082E8BF /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		5BD3166E2832ADE400E02031 /* Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
+		5BD316702832B5F400E02031 /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
 		5BECCBBF2720BE0B00A97846 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5BECCBC12720BE4600A97846 /* Log in.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Log in.swift"; sourceTree = "<group>"; };
 		5BECCBC32721DBD900A97846 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 			children = (
 				5B719553282FCB0D008582E7 /* AppDelelate.swift */,
 				5B9240302737E40F00C676F9 /* Blutooth.swift */,
+				5BD3166E2832ADE400E02031 /* Operations.swift */,
+				5BD316702832B5F400E02031 /* PersistentContainer.swift */,
 			);
 			path = "UiKit-files";
 			sourceTree = "<group>";
@@ -499,6 +505,7 @@
 				0C93F8032811D13B00659379 /* RNLLocationTracker.m in Sources */,
 				5B9240312737E40F00C676F9 /* Blutooth.swift in Sources */,
 				5BECCBC22720BE4600A97846 /* Log in.swift in Sources */,
+				5BD3166F2832ADE400E02031 /* Operations.swift in Sources */,
 				0C93F8002811D13B00659379 /* RNLBeacon.m in Sources */,
 				5B62F89D27FF711600DB7F2C /* Bluetooth-iBeacon.swift in Sources */,
 				5B62F89527FF6C9A00DB7F2C /* Place_holderApp.swift in Sources */,
@@ -509,6 +516,7 @@
 				5BECCBC02720BE0B00A97846 /* MainView.swift in Sources */,
 				0CAF7DC627FB474000341998 /* Binding+Extensions.swift in Sources */,
 				0C93F7FF2811D13B00659379 /* RNLURLBeaconCompressor.m in Sources */,
+				5BD316712832B5F400E02031 /* PersistentContainer.swift in Sources */,
 				5B719554282FCB0D008582E7 /* AppDelelate.swift in Sources */,
 				5BECCBC42721DBDA00A97846 /* SettingsView.swift in Sources */,
 				0CAF7DC327FB418000341998 /* ColorTheme.swift in Sources */,

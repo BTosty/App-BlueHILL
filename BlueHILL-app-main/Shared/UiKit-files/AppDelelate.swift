@@ -34,13 +34,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
-        print("Cringe as well")
         sqeduleRef()
     }
     
     func sqeduleRef(){
         let request = BGAppRefreshTaskRequest(identifier: "Need")
-        request.earliestBeginDate = Date(timeIntervalSinceNow: 5)// check after 2 seconds
+        request.earliestBeginDate = Date(timeIntervalSinceNow: 5)// check after 5 seconds
         
         do{
             try BGTaskScheduler.shared.submit(request)
@@ -52,14 +51,21 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     func checkdist(task: BGAppRefreshTask){
         sqeduleRef()
         
-        let operation = BLEManager().backcheck()
+        let queue = OperationQueue()
+        queue.maxConcurrentOperationCount = 1
+        
+        let context = PersistentContainer.shared.newBackgroundContext()
+        let operations = Operations.update(using: context)
+        let lastOperation = operations.last!
         
         task.expirationHandler = {
+            queue.cancelAllOperations()
         }
         
-        operation.completionBlock = {
+        lastOperation.completionBlock = {
+            task.setTaskCompleted(success: !lastOperation.isCancelled)
         }
         
-        OperationQueue.addOperation(operation)
+        queue.addOperations(operations, waitUntilFinished: true)
     }
 }

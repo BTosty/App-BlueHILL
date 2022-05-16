@@ -34,12 +34,18 @@
 		5B448653272B1C650069091A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECCBC32721DBD900A97846 /* SettingsView.swift */; };
 		5B62F89527FF6C9A00DB7F2C /* Place_holderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62F89427FF6C9A00DB7F2C /* Place_holderApp.swift */; };
 		5B62F89D27FF711600DB7F2C /* Bluetooth-iBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62F89C27FF711600DB7F2C /* Bluetooth-iBeacon.swift */; };
+		5B69016228330DC100929E3F /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B69016128330DC100929E3F /* icon1.png */; };
+		5B69016428330DCB00929E3F /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B69016328330DCB00929E3F /* icon2.png */; };
+		5B69016628330DD000929E3F /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B69016528330DD000929E3F /* icon3.png */; };
+		5B69016828330DD400929E3F /* icon4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B69016728330DD400929E3F /* icon4.png */; };
+		5B69016A28330DD900929E3F /* icon5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B69016928330DD900929E3F /* icon5.png */; };
+		5B69016C28330DDF00929E3F /* icon6.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B69016B28330DDF00929E3F /* icon6.png */; };
+		5B69016E28330DE300929E3F /* icon7.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B69016D28330DE300929E3F /* icon7.png */; };
+		5B69017028330DE700929E3F /* orig.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B69016F28330DE700929E3F /* orig.png */; };
 		5B719554282FCB0D008582E7 /* AppDelelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B719553282FCB0D008582E7 /* AppDelelate.swift */; };
 		5B9240312737E40F00C676F9 /* Blutooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9240302737E40F00C676F9 /* Blutooth.swift */; };
 		5B924037273862EC00C676F9 /* TestBLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B924036273862EC00C676F9 /* TestBLE.swift */; };
 		5B924038273862EC00C676F9 /* TestBLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B924036273862EC00C676F9 /* TestBLE.swift */; };
-		5B9BE82C28233055001C84D9 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 5B9BE82B28233055001C84D9 /* icons */; };
-		5B9BE82D28233055001C84D9 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 5B9BE82B28233055001C84D9 /* icons */; };
 		5BB73D5A271C87540082E8BF /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB73D59271C87540082E8BF /* Tests_iOS.swift */; };
 		5BB73D5C271C87540082E8BF /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB73D5B271C87540082E8BF /* Tests_iOSLaunchTests.swift */; };
 		5BB73D66271C87540082E8BF /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB73D65271C87540082E8BF /* Tests_macOS.swift */; };
@@ -101,10 +107,17 @@
 		5B448642272B07A70069091A /* ItemMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenuView.swift; sourceTree = "<group>"; };
 		5B62F89427FF6C9A00DB7F2C /* Place_holderApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place_holderApp.swift; sourceTree = "<group>"; };
 		5B62F89C27FF711600DB7F2C /* Bluetooth-iBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bluetooth-iBeacon.swift"; sourceTree = "<group>"; };
+		5B69016128330DC100929E3F /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
+		5B69016328330DCB00929E3F /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
+		5B69016528330DD000929E3F /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3.png; sourceTree = "<group>"; };
+		5B69016728330DD400929E3F /* icon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon4.png; sourceTree = "<group>"; };
+		5B69016928330DD900929E3F /* icon5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon5.png; sourceTree = "<group>"; };
+		5B69016B28330DDF00929E3F /* icon6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon6.png; sourceTree = "<group>"; };
+		5B69016D28330DE300929E3F /* icon7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon7.png; sourceTree = "<group>"; };
+		5B69016F28330DE700929E3F /* orig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orig.png; sourceTree = "<group>"; };
 		5B719553282FCB0D008582E7 /* AppDelelate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelelate.swift; sourceTree = "<group>"; };
 		5B9240302737E40F00C676F9 /* Blutooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blutooth.swift; sourceTree = "<group>"; };
 		5B924036273862EC00C676F9 /* TestBLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBLE.swift; sourceTree = "<group>"; };
-		5B9BE82B28233055001C84D9 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = ../../../../icons; sourceTree = "<group>"; };
 		5BB73D43271C87540082E8BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BB73D48271C87540082E8BF /* Place holder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Place holder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB73D4E271C87540082E8BF /* Place holder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Place holder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +229,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		5B69016028330DB400929E3F /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				5B69016F28330DE700929E3F /* orig.png */,
+				5B69016D28330DE300929E3F /* icon7.png */,
+				5B69016B28330DDF00929E3F /* icon6.png */,
+				5B69016928330DD900929E3F /* icon5.png */,
+				5B69016728330DD400929E3F /* icon4.png */,
+				5B69016528330DD000929E3F /* icon3.png */,
+				5B69016328330DCB00929E3F /* icon2.png */,
+				5B69016128330DC100929E3F /* icon1.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
 		5B719555282FCB67008582E7 /* UiKit-files */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,7 +334,7 @@
 		5BBADBC027FF64FE0043A6FD /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				5B9BE82B28233055001C84D9 /* icons */,
+				5B69016028330DB400929E3F /* Icons */,
 				5BB73D43271C87540082E8BF /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -471,7 +499,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BB73D6D271C87540082E8BF /* Assets.xcassets in Resources */,
-				5B9BE82C28233055001C84D9 /* icons in Resources */,
+				5B69016228330DC100929E3F /* icon1.png in Resources */,
+				5B69016C28330DDF00929E3F /* icon6.png in Resources */,
+				5B69016A28330DD900929E3F /* icon5.png in Resources */,
+				5B69016428330DCB00929E3F /* icon2.png in Resources */,
+				5B69017028330DE700929E3F /* orig.png in Resources */,
+				5B69016628330DD000929E3F /* icon3.png in Resources */,
+				5B69016828330DD400929E3F /* icon4.png in Resources */,
+				5B69016E28330DE300929E3F /* icon7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +515,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BB73D6E271C87540082E8BF /* Assets.xcassets in Resources */,
-				5B9BE82D28233055001C84D9 /* icons in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

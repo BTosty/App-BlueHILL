@@ -61,7 +61,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             for device in blue.peripherals{
                 print(">>>>> \(device.name)")
-                if device.distance == "0-5"{
+                if device.distance == Other.shared.setLimit{
                     NSLog(device.name)
                     NSLog(">>>>>>>> TOO FAR")
                     let content = UNMutableNotificationContent()

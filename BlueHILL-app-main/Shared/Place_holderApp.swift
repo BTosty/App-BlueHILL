@@ -18,6 +18,7 @@ struct Place_holderApp: App {
                 .environmentObject(BLEManager.shared)
                 .environmentObject(Save.shared)
                 .environmentObject(Load.shared)
+                .environmentObject(Other.shared)
         }
     }
 }

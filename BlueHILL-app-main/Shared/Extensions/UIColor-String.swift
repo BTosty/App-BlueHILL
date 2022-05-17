@@ -16,7 +16,7 @@ extension UIColor {
     
     class func UIColorFromString(string: String) -> UIColor {
         let componentsString = string.replacingOccurrences(of: "[", with: "").replacingOccurrences(of: "]", with: "")
-        let components = componentsString.components(separatedBy: ", ")
+        let components = componentsString.components(separatedBy: " ")
         return UIColor(red: CGFloat((components[0] as NSString).floatValue),
                      green: CGFloat((components[1] as NSString).floatValue),
                       blue: CGFloat((components[2] as NSString).floatValue),

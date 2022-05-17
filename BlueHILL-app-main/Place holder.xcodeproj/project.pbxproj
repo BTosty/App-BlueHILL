@@ -22,6 +22,7 @@
 		5B08F8E6283398510042A462 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 5B08F8E5283398510042A462 /* SwiftKeychainWrapper */; };
 		5B08F8E828339A0D0042A462 /* Save:Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B08F8E728339A0D0042A462 /* Save:Load.swift */; };
 		5B08F8EA2833C8A80042A462 /* UIColor-String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B08F8E92833C8A80042A462 /* UIColor-String.swift */; };
+		5B08F8EC28345FEE0042A462 /* OtherSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B08F8EB28345FEE0042A462 /* OtherSettings.swift */; };
 		5B448643272B07A70069091A /* ItemMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B448642272B07A70069091A /* ItemMenuView.swift */; };
 		5B448646272B1C410069091A /* Log in.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECCBC12720BE4600A97846 /* Log in.swift */; };
 		5B448649272B1C570069091A /* Log in.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECCBC12720BE4600A97846 /* Log in.swift */; };
@@ -109,6 +110,7 @@
 		0CAF7DC527FB474000341998 /* Binding+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extensions.swift"; sourceTree = "<group>"; };
 		5B08F8E728339A0D0042A462 /* Save:Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Save:Load.swift"; sourceTree = "<group>"; };
 		5B08F8E92833C8A80042A462 /* UIColor-String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-String.swift"; sourceTree = "<group>"; };
+		5B08F8EB28345FEE0042A462 /* OtherSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherSettings.swift; sourceTree = "<group>"; };
 		5B448642272B07A70069091A /* ItemMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenuView.swift; sourceTree = "<group>"; };
 		5B62F89427FF6C9A00DB7F2C /* Place_holderApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place_holderApp.swift; sourceTree = "<group>"; };
 		5B62F89C27FF711600DB7F2C /* Bluetooth-iBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bluetooth-iBeacon.swift"; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				0CAF7DC227FB418000341998 /* ColorTheme.swift */,
+				5B08F8EB28345FEE0042A462 /* OtherSettings.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 				5B448643272B07A70069091A /* ItemMenuView.swift in Sources */,
 				0C93F8012811D13B00659379 /* RNLBeaconScanner.m in Sources */,
 				0C93F8052811D13B00659379 /* RNLBeaconParser.m in Sources */,
+				5B08F8EC28345FEE0042A462 /* OtherSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

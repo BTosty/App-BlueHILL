@@ -20,4 +20,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
       sceneConfig.delegateClass = SceneDelegate.self
       return sceneConfig
     }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        let save = Save.shared
+        
+        save.SaveToKey()
+    }
 }

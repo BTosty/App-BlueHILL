@@ -13,13 +13,12 @@ import UserNotifications
 struct SettingsView: View {
     
     @EnvironmentObject var colorTheme: ColorTheme
+    @EnvironmentObject var other: Other
 
     // EnvironmentObject is injected AFTER view constructor call
     // so you can't use it to init @State variables.
     // Because of that we init "default" value and then override
     // them in onAppear function call
-    @State private var blueAndPurpleSelected: Bool = false
-    @State private var blueAndYellowSelected: Bool = false
     @State private var setnotif = false
     
     init (){
@@ -30,9 +29,32 @@ struct SettingsView: View {
         
         VStack {
             List{
-                Section(header: Text("Box settings")){
+                Section(header: Text("Device settings")){
                     ColorPicker(selection: $colorTheme.color, supportsOpacity: false) {
                         Text("Box color")
+                    }
+                    .foregroundColor(Color.white)
+                    .listRowBackground(Color.black)
+                    DisclosureGroup("Device max distance"){
+                        RadioGroupPicker(selectedIndex: $other.selectedIndex, titles: ["0-5m", "5-10m", "10+m"])
+                            .selectedColor(.green)
+                            .itemSpacing(200)
+                            .titleColor(.white)
+                            .titleAlignment(.left)
+                            .environment(\.layoutDirection, .rightToLeft)
+                            .fixedSize()
+                            .onChange(of: other.selectedIndex){ newval in
+                                switch newval{
+                                case 0:
+                                    other.setLimit = "0-5"
+                                case 1:
+                                    other.setLimit = "5-10"
+                                case 2:
+                                    other.setLimit = "10+"
+                                default:
+                                    other.setLimit = "10+"
+                                }
+                            }
                     }
                     .foregroundColor(Color.white)
                     .listRowBackground(Color.black)
@@ -85,8 +107,26 @@ struct SettingsView: View {
             Spacer()
         }
         .onAppear(perform: {
-            blueAndPurpleSelected = colorTheme.selectedSceme == .blueAndPurple
-            blueAndYellowSelected = colorTheme.selectedSceme == .blueAndYellow
+            switch colorTheme.selectedSceme{
+            case .blueAndPurple:
+                colorTheme.selectedIndex = 0
+            case .blueAndYellow:
+                colorTheme.selectedIndex = 1
+            default:
+                colorTheme.selectedIndex = 0
+            }
+            
+            switch other.setLimit{
+            case "0-5":
+                other.selectedIndex = 0
+            case "5-10":
+                other.selectedIndex = 1
+            case "10+":
+                other.selectedIndex = 2
+            default:
+                other.selectedIndex = 2
+            }
+        
             let current = UNUserNotificationCenter.current()
             
             current.getNotificationSettings(completionHandler: { (settings) in

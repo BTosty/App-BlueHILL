@@ -14,6 +14,8 @@ enum ColorScheme {
 
 class ColorTheme: ObservableObject {
 
+    static let shared = ColorTheme()
+    
     @Published var selectedSceme: ColorScheme = .blueAndPurple
     @Published var color = Color.blue
     @Published var selectedIndex: Int = 0

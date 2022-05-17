@@ -20,18 +20,4 @@ class AppDelegate: NSObject, UIApplicationDelegate {
       sceneConfig.delegateClass = SceneDelegate.self
       return sceneConfig
     }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        NSLog(">>>>>>>> applicationWillTerminate")
-//        let content = UNMutableNotificationContent()
-//        content.title = "Warning"
-//        content.subtitle = "x has been forgoten"
-//        content.sound = UNNotificationSound.default
-//        //le trigger
-//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
-//        //le id
-//        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-//        //send it
-//        UNUserNotificationCenter.current().add(request)
-    }
 }

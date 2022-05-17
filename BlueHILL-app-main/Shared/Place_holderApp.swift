@@ -14,8 +14,10 @@ struct Place_holderApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
-                .environmentObject(ColorTheme())
+                .environmentObject(ColorTheme.shared)
                 .environmentObject(BLEManager.shared)
+                .environmentObject(Save.shared)
+                .environmentObject(Load.shared)
         }
     }
 }

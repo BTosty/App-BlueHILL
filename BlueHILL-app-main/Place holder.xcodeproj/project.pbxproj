@@ -19,6 +19,9 @@
 		0C93F8062811D13B00659379 /* RNLSignalMeasurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C93F7FC2811D13B00659379 /* RNLSignalMeasurement.m */; };
 		0CAF7DC327FB418000341998 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAF7DC227FB418000341998 /* ColorTheme.swift */; };
 		0CAF7DC627FB474000341998 /* Binding+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAF7DC527FB474000341998 /* Binding+Extensions.swift */; };
+		5B08F8E6283398510042A462 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 5B08F8E5283398510042A462 /* SwiftKeychainWrapper */; };
+		5B08F8E828339A0D0042A462 /* Save:Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B08F8E728339A0D0042A462 /* Save:Load.swift */; };
+		5B08F8EA2833C8A80042A462 /* UIColor-String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B08F8E92833C8A80042A462 /* UIColor-String.swift */; };
 		5B448643272B07A70069091A /* ItemMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B448642272B07A70069091A /* ItemMenuView.swift */; };
 		5B448646272B1C410069091A /* Log in.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECCBC12720BE4600A97846 /* Log in.swift */; };
 		5B448649272B1C570069091A /* Log in.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECCBC12720BE4600A97846 /* Log in.swift */; };
@@ -104,6 +107,8 @@
 		0C93F7FD2811D13B00659379 /* RNLURLBeaconCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNLURLBeaconCompressor.h; sourceTree = "<group>"; };
 		0CAF7DC227FB418000341998 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		0CAF7DC527FB474000341998 /* Binding+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extensions.swift"; sourceTree = "<group>"; };
+		5B08F8E728339A0D0042A462 /* Save:Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Save:Load.swift"; sourceTree = "<group>"; };
+		5B08F8E92833C8A80042A462 /* UIColor-String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-String.swift"; sourceTree = "<group>"; };
 		5B448642272B07A70069091A /* ItemMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenuView.swift; sourceTree = "<group>"; };
 		5B62F89427FF6C9A00DB7F2C /* Place_holderApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place_holderApp.swift; sourceTree = "<group>"; };
 		5B62F89C27FF711600DB7F2C /* Bluetooth-iBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bluetooth-iBeacon.swift"; sourceTree = "<group>"; };
@@ -147,6 +152,7 @@
 			files = (
 				5BFA5B5B2810BE7000EF169F /* CoreLocationUI.framework in Frameworks */,
 				5BFA5B592810BE4000EF169F /* CoreLocation.framework in Frameworks */,
+				5B08F8E6283398510042A462 /* SwiftKeychainWrapper in Frameworks */,
 				5BFA5B572810BBC900EF169F /* CoreBluetooth.framework in Frameworks */,
 				5BFA5B552810B11100EF169F /* RadioGroup in Frameworks */,
 				5BECCBCB2725E12200A97846 /* MapKit.framework in Frameworks */,
@@ -215,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				0CAF7DC527FB474000341998 /* Binding+Extensions.swift */,
+				5B08F8E92833C8A80042A462 /* UIColor-String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -252,6 +259,7 @@
 				5BD3166E2832ADE400E02031 /* Operations.swift */,
 				5BD316702832B5F400E02031 /* PersistentContainer.swift */,
 				0C04D29C2832D58200E5F194 /* SceneDelegate.swift */,
+				5B08F8E728339A0D0042A462 /* Save:Load.swift */,
 			);
 			path = "UiKit-files";
 			sourceTree = "<group>";
@@ -385,6 +393,7 @@
 			name = "Place holder (iOS)";
 			packageProductDependencies = (
 				5BFA5B542810B11100EF169F /* RadioGroup */,
+				5B08F8E5283398510042A462 /* SwiftKeychainWrapper */,
 			);
 			productName = "Place holder (iOS)";
 			productReference = 5BB73D48271C87540082E8BF /* Place holder.app */;
@@ -480,6 +489,7 @@
 			mainGroup = 5BB73D3B271C874F0082E8BF;
 			packageReferences = (
 				5BFA5B532810B11100EF169F /* XCRemoteSwiftPackageReference "RadioGroup" */,
+				5B08F8E4283398510042A462 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 			);
 			productRefGroup = 5BB73D49271C87540082E8BF /* Products */;
 			projectDirPath = "";
@@ -541,6 +551,7 @@
 			files = (
 				0C93F8032811D13B00659379 /* RNLLocationTracker.m in Sources */,
 				5B9240312737E40F00C676F9 /* Blutooth.swift in Sources */,
+				5B08F8EA2833C8A80042A462 /* UIColor-String.swift in Sources */,
 				5BECCBC22720BE4600A97846 /* Log in.swift in Sources */,
 				5BD3166F2832ADE400E02031 /* Operations.swift in Sources */,
 				0C93F8002811D13B00659379 /* RNLBeacon.m in Sources */,
@@ -550,6 +561,7 @@
 				0C93F8022811D13B00659379 /* RNLBeaconTracker.m in Sources */,
 				0C93F7FE2811D13B00659379 /* RNLBeaconTableViewController.m in Sources */,
 				0C93F8062811D13B00659379 /* RNLSignalMeasurement.m in Sources */,
+				5B08F8E828339A0D0042A462 /* Save:Load.swift in Sources */,
 				0C93F8042811D13B00659379 /* RNLBeacon+Distance.m in Sources */,
 				5BECCBC02720BE0B00A97846 /* MainView.swift in Sources */,
 				0CAF7DC627FB474000341998 /* Binding+Extensions.swift in Sources */,
@@ -1021,6 +1033,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5B08F8E4283398510042A462 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		5BFA5B532810B11100EF169F /* XCRemoteSwiftPackageReference "RadioGroup" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/yonat/RadioGroup";
@@ -1032,6 +1052,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5B08F8E5283398510042A462 /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B08F8E4283398510042A462 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
 		5BFA5B542810B11100EF169F /* RadioGroup */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5BFA5B532810B11100EF169F /* XCRemoteSwiftPackageReference "RadioGroup" */;

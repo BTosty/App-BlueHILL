@@ -16,11 +16,29 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         BGTaskScheduler.shared.register(forTaskWithIdentifier: "Need", using: nil){ task in
             self.checkdist(task: task as! BGAppRefreshTask)
         }
+        
+        let load = Load.shared
+        
+        load.LoadFromKey()
+    }
+    
+    func sceneDidBecomeActive(_ scene: UIScene) {
+        
+        print("Me on yes")
+        
+        let load = Load.shared
+        
+        load.LoadFromKey()
     }
         
     func sceneDidEnterBackground(_ scene: UIScene) {
         NSLog(">>>>>>>> sceneDidEnterBackground")
         NSLog(">>>>>>>> work tim")
+        
+        let save = Save.shared
+        
+        save.SaveToKey()
+        
         let blue = BLEManager.shared
         if blue.isSwitchedOn{
             blue.startScanning()
@@ -80,7 +98,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         NSLog(">>>>>>>> sqeduleRef")
 
         let request = BGAppRefreshTaskRequest(identifier: "Need")
-        request.earliestBeginDate = Date(timeIntervalSinceNow: 5) // check after 5 seconds
+        request.earliestBeginDate = Date(timeIntervalSinceNow: 1) // check after 1 seconds
         
         do{
             try BGTaskScheduler.shared.submit(request)
